@@ -1,0 +1,32 @@
+\input{src/preamble.tex}
+
+\begin{document}
+
+\bibliographystyle{plain}
+\nobibliography{articles}
+
+\input{src/top.tex}
+
+%Main page
+\begin{minipage}{0.65\textwidth}
+%---------------------
+\input{src/abstract.tex}
+\input{src/experience.tex}
+\input{src/publication.tex}
+\input{src/education.tex}
+%---------------------
+\end{minipage}
+%
+\hfill\
+%
+%Right panel
+\begin{minipage}{0.25\textwidth}
+%---------------------
+\input{src/personalInfo.tex}
+\input{src/skills.tex}
+\input{src/language.tex}
+\input{src/hobbies.tex}
+%---------------------
+\end{minipage}
+
+\end{document}
