@@ -1,0 +1,39 @@
+\documentclass[a4paper, 10pt]{extarticle}
+
+%Packages
+\usepackage[left=0.5cm,right=0.5cm,top=0cm,bottom=0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage[usenames,dvipsnames]{xcolor}		
+\usepackage{supertabular} 		
+\usepackage{titlesec}			
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{lipsum}
+\usepackage{tikz}
+\RequirePackage{color,graphicx}
+
+%Options
+\pagenumbering{gobble}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%Style
+\definecolor{blueblack}{RGB}{92,98,112}
+\definecolor{mediumgray}{RGB}{150,150,150}
+\definecolor{lightgray}{RGB}{240,240,240}
+\colorlet{titlerulecolor}{mediumgray}
+\titleformat{\section}{\large\raggedright\bfseries\vspace{0.5cm}}{}{0em}{}[\color{titlerulecolor}\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+%Bullets
+\newcommand{\grade}[1]{%
+\begin{tikzpicture}
+\clip (1em-.3em,-.3em) rectangle (5em +.5em ,.3em);
+\begin{scope}
+\clip (1em-.3em,-.3em) rectangle (#1em +.5em ,.3em);
+\foreach \x in {1,2,...,5}{\path[fill=blueblack] (\x em,0) circle (.25em);}
+\end{scope}
+\foreach \x in {1,2,...,5}{\draw (\x em,0) circle (.25em);}\end{tikzpicture}}
