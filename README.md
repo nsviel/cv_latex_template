@@ -1,2 +1,2 @@
 # cv_latex_template
-An homemade CV latex template
+CV latex template
